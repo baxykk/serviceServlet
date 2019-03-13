@@ -7,14 +7,13 @@
 					.addEventListener(
 							'click',
 							function(event) {
-
+								${client.account.balance}
 								var el = document.getElementById('amount-card');
 								var ely = document.getElementById('tillY');
 								var elm = document.getElementById('tillM');
 									
 								var transactionAmount = parseFloat(el.value);
-								var nodes = document.getElementById("balance").childNodes;
-								var currentBalance = parseFloat(nodes[1].textContent);
+								var currentBalance = parseFloat(${client.account.balance});
 								
 								var year = Number(ely.value);
 								
@@ -70,8 +69,7 @@
 
 							var el = document.getElementById('amount-bank');
 							var transactionAmount = parseFloat(el.value);
-							var nodes = document.getElementById("balance").childNodes;
-							var currentBalance = parseFloat(nodes[1].textContent);
+							var currentBalance = parseFloat(${client.account.balance});
 
 							el.classList.remove('is-invalid');
 							document.getElementById('feedback-bank').innerHTML = "";

@@ -36,7 +36,7 @@ public class ExecutePaymentAction extends AbstractUserAction {
 	}	
 	
 	private String createReference(int accountNumber, String reference) {
-		return "Ref: "+ accountNumber + " payment for " + reference;
+		return "Ref: "+ accountNumber + " payment " + reference;
 	}
 
 }
