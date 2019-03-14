@@ -13,7 +13,7 @@
 <div class="container viewport col">
            <div class="container col-8 d-flex align-items-center justify-content-center login">
              <div class="row align-items-center">
-                <form id="save-card" class="login border border-danger rounded p-5 needs-validation" novalidate> 
+                <form id="save-card" class="login border border-danger rounded p-5"> 
                     <div class="form-group text-center align-bottom">
                         <h1>New Card</h1>
                         <hr class="my-4">
@@ -67,16 +67,16 @@
                     
                     <div class="form-row">
                         <div class="col text-center">
-                            <button type="submit" form="save-card" formmethod="post" formaction="${pageContext.request.contextPath}/account" class="btn btn-danger border-0" name="action" value="save-new-card">Save</button> 
+                            <button type="submit" form="save-card" formmethod="post" formaction="${pageContext.request.contextPath}/account" class="btn btn-danger border-0" name="action" value="save-new-card" id="nbtn">Save</button> 
                         </div>
-                        <div class="form-group px-2"></div>
-                        <div class="col text-center">
-                            <button type="submit" formmethod="get" formaction="${pageContext.request.contextPath}/account" class="btn btn-danger border-0" form="save-card">Cancel</button> 
-                        </div>
-                    </div>           
+                    </div>
+                    <div class="form-row">
+                        <p6 id="fb-v"></p6> 
+                    </div>
+                               
                 </form>
                </div>
             </div>
         </div>    
 
-<%@ include file="/jsp/static/footer-user.jsp" %>
+<%@ include file="/jsp/static/footer-newcard.jsp" %>

@@ -3,17 +3,18 @@
     var cardNumbers = [];
     function ready(){
     	cardNumbers.push("--");
-    	cardDetails.push("");        
+    	cardDetails.push("");   	
+        	
     	<c:forEach var="card" items="${cards}">
     	 	<c:choose>
                <c:when test="${card.isBlocked()}"></c:when>         
-               <c:otherwise>
-               		cardNumbers.push("${card.cardNumber}");    	   
-               		cardDetails.push("${card.validTillMonth}/20${card.validTillYear}");
+               <c:otherwise>               	  	
+               			cardNumbers.push("${card.cardNumber}");    	   
+               			cardDetails.push("${card.validTillMonth}/20${card.validTillYear}");              		
                </c:otherwise>
             </c:choose>
         </c:forEach> 	
-    }
+    };
     
     document.addEventListener("DOMContentLoaded", ready);
     

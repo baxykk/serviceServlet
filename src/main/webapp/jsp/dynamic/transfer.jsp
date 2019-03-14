@@ -1,4 +1,6 @@
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ include file="/jsp/static/header.jsp" %>
+
 <link href="<c:url value="/css/service.css"/>" rel="stylesheet" type="text/css">
 
 <!-- Dynamic page title -->
@@ -86,13 +88,13 @@
                     <div class="form-row ">
                         <div class="col text-center position-relative">
                              <input class="form-control" id="am" name="amount" type="text" placeholder="100.24" pattern="\d+(\.\d{1,2})?" required>
-                             <p5 id="fb-am"></div>                          
+                             <p5 id="fb-am"></p5>                          
                         </div>
                         <div class="form-group px-2"></div>
                         <div class="col text-center">
                             <button id="tbtn" type="submit" form="transfer-between-cards" formmethod="post" formaction="${pageContext.request.contextPath}/account" class="btn btn-danger border-0" name="action" value="transfer">Confirm transfer</button> 
                         </div>
-                    </div>           
+                   </div>         
                 </form>
                </div>
            </div>           
